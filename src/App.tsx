@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Letter from "./components/Letter/Letter";
+import Alphabet from "./components/Alphabet/Alphabet";
 
 function App() {
   return (
-    <Letter value="Ф" />
+    <Alphabet />
   );
 }
 

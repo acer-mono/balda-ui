@@ -1,0 +1,4 @@
+.Alphabet {
+    display: grid;
+    grid-template-columns: repeat(11, 25px);
+}
