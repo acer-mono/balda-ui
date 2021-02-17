@@ -4,14 +4,8 @@ import Letter from './Letter';
 
 describe('Letter tests', () => {
     test('renders Letter A', () => {
-        render(<Letter value="A" />);
+        render(<Letter value="А" />);
         const linkElement = screen.getByText(/A/i);
         expect(linkElement).toBeInTheDocument();
-    });
-
-    test('renders Letter with empty value', () => {
-        expect(() => {
-            render(<Letter value="" />);
-        }).toThrowError();
     });
 })

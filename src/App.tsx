@@ -4,7 +4,7 @@ import Letter from "./components/Letter/Letter";
 
 function App() {
   return (
-    <Letter value="A" />
+    <Letter value="Ф" />
   );
 }
 
