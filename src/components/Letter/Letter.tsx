@@ -14,7 +14,7 @@ type LetterProps = {
 
 const Letter: React.FC<LetterProps> = ({value} : LetterProps) => {
     const [{ opacity }, dragRef] = useDrag({
-        item: { type: 'letter' },
+        item: { type: 'letter', value: value },
         collect: (monitor) => ({
             opacity: monitor.isDragging() ? 0.5 : 1
         })
