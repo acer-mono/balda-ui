@@ -5,7 +5,7 @@ import Letter from './Letter';
 describe('Letter tests', () => {
     test('renders Letter A', () => {
         render(<Letter value="А" />);
-        const linkElement = screen.getByText(/A/i);
+        const linkElement = screen.getByText("А");
         expect(linkElement).toBeInTheDocument();
     });
 })

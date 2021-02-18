@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import {Board} from "./Board";
+import Board from "./Board";
 
 describe('Board tests', () => {
     test('renders Board with 7 rows and columns',  () => {
