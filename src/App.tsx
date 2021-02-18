@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Cell from "./components/Cell/Cell";
+import {Board} from "./components/Board/Board";
 
 function App() {
   return (
-    <Cell />
+    <Board size={5} />
   );
 }
 
