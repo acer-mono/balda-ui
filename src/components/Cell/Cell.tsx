@@ -15,6 +15,7 @@ const Cell = () => {
         canDrop: () => letter === "",
         drop: ({ value }: dragObject) => setLetter(value)
     })
+
     return (
         <div ref={drop} className="Cell" data-testid="Cell" >{letter}</div>
     )
