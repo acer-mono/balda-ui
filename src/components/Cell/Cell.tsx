@@ -10,19 +10,13 @@ const Cell = () => {
         value: string
     }
 
-    const [{ isOver, canDrop }, drop] = useDrop({
+    const [,drop] = useDrop({
         accept: 'letter',
         canDrop: () => letter === "",
-        drop: ({type, value }: dragObject) => setLetter(value),
-        collect: (monitor) => ({
-            isOver: !!monitor.isOver(),
-            canDrop: !!monitor.canDrop(),
-        }),
+        drop: ({ value }: dragObject) => setLetter(value)
     })
     return (
-        <div ref={drop}
-             className="Cell"
-             data-testid="Cell" >{letter}</div>
+        <div ref={drop} className="Cell" data-testid="Cell" >{letter}</div>
     )
 }
 
