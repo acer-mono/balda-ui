@@ -7,7 +7,7 @@ type BoardProps = {
     size: typeof Size[number];
 }
 
-export const Board: React.FC<BoardProps> = ({size} : BoardProps) => {
+const Board: React.FC<BoardProps> = ({size} : BoardProps) => {
     let cells = [];
     for (let i = 0; i < size * size; i++) {
         cells.push(<Cell key={i} />);
@@ -19,3 +19,5 @@ export const Board: React.FC<BoardProps> = ({size} : BoardProps) => {
         {cells}
     </div>
 }
+
+export default Board;

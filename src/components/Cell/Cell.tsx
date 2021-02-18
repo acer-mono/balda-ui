@@ -1,8 +1,10 @@
 import React from 'react';
 import  './Cell.css';
 
-export default function Cell() {
+const Cell = () => {
     return (
-        <div className="Cell" data-testid="Cell"></div>
+        <div className="Cell" data-testid="Cell" />
     )
 }
+
+export default Cell;

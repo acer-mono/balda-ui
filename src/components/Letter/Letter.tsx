@@ -7,11 +7,11 @@ export const Letters = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж',
 
 export type LetterValue = typeof Letters[number];
 
-export interface LetterProps {
+type LetterProps = {
     value: LetterValue
 }
 
-function Letter ({value} : LetterProps) {
+const Letter: React.FC<LetterProps> = ({value} : LetterProps) => {
 
     return (
         <div data-testid="Letter" className="Letter">{value}</div>

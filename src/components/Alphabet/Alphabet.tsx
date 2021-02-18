@@ -2,7 +2,7 @@ import React from 'react';
 import Letter, {Letters, LetterValue} from "../Letter/Letter";
 import './Alphabet.css'
 
-export default function Alphabet() {
+const Alphabet = () => {
     return (
         <div className="Alphabet">
             {Letters.map((value: LetterValue, index) =>
@@ -11,3 +11,5 @@ export default function Alphabet() {
         </div>
     )
 }
+
+export default Alphabet;
