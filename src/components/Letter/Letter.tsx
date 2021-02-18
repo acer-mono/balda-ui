@@ -1,5 +1,6 @@
 import React from 'react';
 import './Letter.css';
+import { useDrag } from 'react-dnd'
 
 export const Letters = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж',
     'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У',
@@ -12,9 +13,18 @@ type LetterProps = {
 }
 
 const Letter: React.FC<LetterProps> = ({value} : LetterProps) => {
-
+    const [{ opacity }, dragRef] = useDrag({
+        item: { type: 'letter' },
+        collect: (monitor) => ({
+            opacity: monitor.isDragging() ? 0.5 : 1
+        })
+    })
     return (
-        <div data-testid="Letter" className="Letter">{value}</div>
+        <div
+            ref={dragRef}
+            style={{ opacity }}
+            className="Letter"
+            data-testid="Letter">{value}</div>
     )
 }
 
