@@ -39,7 +39,7 @@ const RegistrationView = () => {
         fetch(`https://source.unsplash.com/random/${styles.width}x${styles.width/2}`).then((response) => {
             setValues({...values, image: response.url});
         })
-    }, [values]);
+    }, []);
 
     return (
         <Paper className="Card" style={{width: `${styles.width}px`}} variant="outlined">
